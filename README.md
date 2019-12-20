@@ -20,6 +20,7 @@ This project uses a number of open source projects to work properly:
 * [Node.js](https://nodejs.org/en/) - evented I/O for the backend
 * [Express](https://expressjs.com/) - fast node.js web framework for Node.js
 * [Webpack](https://webpack.js.org/) - static module bundler for modern JavaScript applications.
+* [Mongodb](https://www.mongodb.com/) - NoSQL Database.
 
 ### Browsers Support
   - Tested on Chrome, Mozilla Firefox, and Microsoft Edge Browsers.
@@ -66,8 +67,3 @@ $ npm run start or yarn start
                 └── routes        # All routes/REST APIs maintained here.
     └── README.md                 # Guidelines for application setup and details.
 
-
-License
-----
-
-MIT
