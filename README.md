@@ -1,17 +1,17 @@
-# Contact Dictionary
+# Employee Peformance Evaluation
 
-Contact Dictionary is a single page CRUD application to manage contact details.
+Employee Peformance Evaluation is a single page CRUD application that allows employees to submit feedback toward each other's performance review.
 
 # Features!
 
-  - Get Contacts list.
-  - Add Contact
-  - Edit Contact
-  - Delete Contact.
+  - Get Employees list.
+  - Add Employee
+  - View Employee Deails with its feedbacks
+  - Employee can add reviews for other employee.
 
 ### Tech
 
-Contact Dictionary uses a number of open source projects to work properly:
+This project uses a number of open source projects to work properly:
 
 * [React](https://reactjs.org/) - JavaScript library for building user interfaces.
 * [VSCode Editor](https://code.visualstudio.com/) - awesome text editor.
@@ -26,16 +26,25 @@ Contact Dictionary uses a number of open source projects to work properly:
 
 ### Installation
 
-Contact Dictionary requires [Node.js](https://nodejs.org/en/) v8+ to run.
+It requires [Node.js](https://nodejs.org/en/) v8+ to run.
+It requires [Mongodb]
 
-Steps to run the application.
+### MongoDB Setup
+ - Install Mongodb
+ - Start mongod server.
+ - Create `admin` user using mongodb query manually.
+<pre><code>db.employees.insertOne({firstName: "Yamini", lastName: "Patil", email: "ypatil@paypay.com", role: "admin", isActive: true, permissions: [{_id: "emp", title: "Employee Management", description: "Manage Employees"}, {_id: "perfReview", title: "Performance Review", description: "View and Update Performance Reviews."}]})</code></pre>
+ - Add fixed questions into `review_metrics` collection.
+<pre><code>db.review_metrics.insertMany([{name: "Overall Performance"}, {name: "Goals Achieved"}, {name: "Improvement"}, {name: "Core Values"}])</code></pre>
+
+### Steps to run the application.
  - Clone project
 ```sh
-$ cd Contact_Dictionary
+$ cd FullStackEngineerChallenge
 $ npm install or yarn install
 $ npm run start or yarn start
 ```
-
+ - Use email as y
 ### Folder Structure
 
     .
@@ -43,13 +52,11 @@ $ npm run start or yarn start
     ├── src                       # Source files, It contains client as well as server files.
           ├── client              # Client Files.
                 ├── __test__      # It contains all unit test cases.
-                ├── actions       # It contains action creators.
-                ├── components    # Folder for Presentational/Dumb Components.
-                ├── contants      # Application level contants.
-                ├── containers    # Container/Smart Components.
-                ├── reducers      # Reducers to get new state based on action.
-                ├── store         # Setup application store.
-                ├── test-report   # Report generated in HTML format when unit test cases executes.
+                ├── Actions       # It contains action creators.
+                ├── Components    # Folder for Presentational/Dumb Components.
+                ├── Containers    # Container/Smart Components.
+                ├── Reducers      # Reducers to get new state based on action.
+                ├── Store         # Setup application store.
                 └── index.js      # Entry point for application.
 
           ├── server              # Server Files.
@@ -58,50 +65,7 @@ $ npm run start or yarn start
     └── README.md                 # Guidelines for application setup and details.
 
 
-### Development
-
-Want to contribute? Great!
-
-Contact Dictionary uses Webpack, Hot reloading module for fast developing.
-Make a change in your file and instantanously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
-```sh
-$ npm run server or yarn server
-```
-
-Second Tab:
-```sh
-$ npm run client or yarn client
-```
-
-(optional) Third: To generate unit test report. It also generate report in html format.
-```sh
-$ npm run test or yarn test
-```
-
-(optional) Test coverage
-```sh
-$ npm run test:coverage or yar test:coverage
-```
-
-#### Building for source
-For production release:
-```sh
-$ npm run build or yarn build
-```
-
-### Todos
-
- - Write MORE Tests.
- - Create application document using Storybook.
-
 License
 ----
 
 MIT
-
-
-**Free Software, Hell Yeah!**
