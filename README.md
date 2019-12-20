@@ -33,7 +33,7 @@ It requires [Mongodb]
  - Install Mongodb
  - Start mongod server.
  - Create `emp_feedback` database
- - Two Collections should exists `employees` and `review_metrics`
+ - This database will have `employees` and `review_metrics` collection.
  - Create `admin` user using mongodb query manually.
 <pre><code>db.employees.insertOne({firstName: "Yamini", lastName: "Patil", email: "ypatil@paypay.com", role: "admin", isActive: true, permissions: [{_id: "emp", title: "Employee Management", description: "Manage Employees"}, {_id: "perfReview", title: "Performance Review", description: "View and Update Performance Reviews."}]})</code></pre>
  - Add fixed questions into `review_metrics` collection.
