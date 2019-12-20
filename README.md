@@ -1,39 +1,107 @@
-# Full Stack Developer Challenge
-This is an interview challengs. Please feel free to fork. Pull Requests will be ignored.
+# Contact Dictionary
 
-## Requirements
-Design a web application that allows employees to submit feedback toward each other's performance review.
+Contact Dictionary is a single page CRUD application to manage contact details.
 
-*Partial solutions are acceptable.*  It is not necessary to submit a complete solution that implements every requirement.
+# Features!
 
-### Admin view
-* Add/remove/update/view employees
-* Add/update/view performance reviews
-* Assign employees to participate in another employee's performance review
+  - Get Contacts list.
+  - Add Contact
+  - Edit Contact
+  - Delete Contact.
 
-### Employee view
-* List of performance reviews requiring feedback
-* Submit feedback
+### Tech
 
-## Challenge Scope
-* High level description of design and technologies used
-* Server side API (using a programming language and/or framework of your choice)
-  * Implementation of at least 3 API calls
-  * Most full stack web developers at PayPay currently use Java, Ruby on Rails, or Node.js on the server(with MySQL for the database), but feel free to use other tech if you prefer
-* Web app
-  * Implementation of 2-5 web pages using a modern web framework (e.g. React or Angular) that talks to server side
-    * This should integrate with your API, but it's fine to use static responses for some of it 
-* Document all assumptions made
-* Complete solutions aren't required, but what you do submit needs to run.
+Contact Dictionary uses a number of open source projects to work properly:
 
-## How to complete this challenge
-* Fork this repo in github
-* Complete the design and code as defined to the best of your abilities
-* Place notes in your code to help with clarity where appropriate. Make it readable enough to present to the PayPay interview team
-* Complete your work in your own github repo and send the results to us and/or present them during your interview
+* [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+* [VSCode Editor](https://code.visualstudio.com/) - awesome text editor.
+* [Redux](https://redux.js.org/) - Predictable state container for JavaScript apps.
+* [Material-UI](https://material-ui.com/) - The world's most popular React UI framework.
+* [Node.js](https://nodejs.org/en/) - evented I/O for the backend
+* [Express](https://expressjs.com/) - fast node.js web framework for Node.js
+* [Webpack](https://webpack.js.org/) - static module bundler for modern JavaScript applications.
 
-## What are we looking for? What does this prove?
-* Assumptions you make given limited requirements
-* Technology and design choices
-* Identify areas of your strengths
-* This is not a pass or fail test, this will serve as a common ground that we can deep dive together into specific issues
+### Browsers Support
+  - Tested on Chrome, Mozilla Firefox, and Microsoft Edge Browsers.
+
+### Installation
+
+Contact Dictionary requires [Node.js](https://nodejs.org/en/) v8+ to run.
+
+Steps to run the application.
+ - Clone project
+```sh
+$ cd Contact_Dictionary
+$ npm install or yarn install
+$ npm run start or yarn start
+```
+
+### Folder Structure
+
+    .
+
+    ├── src                       # Source files, It contains client as well as server files.
+          ├── client              # Client Files.
+                ├── __test__      # It contains all unit test cases.
+                ├── actions       # It contains action creators.
+                ├── components    # Folder for Presentational/Dumb Components.
+                ├── contants      # Application level contants.
+                ├── containers    # Container/Smart Components.
+                ├── reducers      # Reducers to get new state based on action.
+                ├── store         # Setup application store.
+                ├── test-report   # Report generated in HTML format when unit test cases executes.
+                └── index.js      # Entry point for application.
+
+          ├── server              # Server Files.
+                ├── index.js      # Used Built-in middlewares and create HTTP server and run it.
+                └── routes        # All routes/REST APIs maintained here.
+    └── README.md                 # Guidelines for application setup and details.
+
+
+### Development
+
+Want to contribute? Great!
+
+Contact Dictionary uses Webpack, Hot reloading module for fast developing.
+Make a change in your file and instantanously see your updates!
+
+Open your favorite Terminal and run these commands.
+
+First Tab:
+```sh
+$ npm run server or yarn server
+```
+
+Second Tab:
+```sh
+$ npm run client or yarn client
+```
+
+(optional) Third: To generate unit test report. It also generate report in html format.
+```sh
+$ npm run test or yarn test
+```
+
+(optional) Test coverage
+```sh
+$ npm run test:coverage or yar test:coverage
+```
+
+#### Building for source
+For production release:
+```sh
+$ npm run build or yarn build
+```
+
+### Todos
+
+ - Write MORE Tests.
+ - Create application document using Storybook.
+
+License
+----
+
+MIT
+
+
+**Free Software, Hell Yeah!**
